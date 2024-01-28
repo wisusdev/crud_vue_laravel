@@ -1,7 +1,7 @@
 <template>
 	<div class="row">
 		<div class="col-12 mb-2">
-            <router-link :to='{name:"create"}' class="btn btn-success">Create</router-link>
+            <router-link :to='{name:"create"}' class="btn btn-success">Create <i class="bi bi-plus"></i></router-link>
         </div>
 		<div class="col-12">
 			<table class="table table-striped">
@@ -19,9 +19,9 @@
 						<td>{{ user.name }}</td>
 						<td>{{ user.email }}</td>
 						<td>
-							<router-link :to="{ name: 'show', params: { id: user.id } }" class="btn btn-primary">Show</router-link>
-							<router-link :to="{ name: 'edit', params: { id: user.id } }" class="btn btn-warning">Edit</router-link>
-							<button @click="deleteUser(user.id)" class="btn btn-danger">Delete</button>
+							<router-link :to="{ name: 'show', params: { id: user.id } }" class="btn btn-primary me-3">Show <i class="bi bi-eye"></i></router-link>
+							<router-link :to="{ name: 'edit', params: { id: user.id } }" class="btn btn-warning me-3">Edit <i class="bi bi-pen"></i></router-link>
+							<button @click="deleteUser(user.id)" class="btn btn-danger">Delete <i class="bi bi-trash3"></i></button>
 						</td>
 					</tr>
 				</tbody>
